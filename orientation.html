@@ -11,6 +11,9 @@
     alpha:<span id="alpha"></span><br/>
     beta:<span id="beta"></span><br/>
     gamma:<span id="gamma"></span><br/>
+    
+    
+    webkitCompassHeading:<span id="webkitCompassHeading"></span><br/>
    
 </body>
 <script>
@@ -19,13 +22,17 @@
             var a = document.getElementById('alpha'),
                 b = document.getElementById('beta'),
                 g = document.getElementById('gamma'),
+                w = document.getElementById('webkitCompassHeading'),
                 alpha = event.alpha,
                 beta = event.beta,
                 gamma = event.gamma;
+                heading = event.webkitCompassHeading;
+            
                 
             a.innerHTML = Math.round(alpha); // 水平旋转
             b.innerHTML = Math.round(beta);// 前后反转
             g.innerHTML = Math.round(gamma);// 左右翻转
+            w.innerHTML = heading;
  
         }, false);
     } else {
